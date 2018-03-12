@@ -20,7 +20,7 @@ RUN echo "Acquire::http::Proxy \"$HTTP_PROXY\";" >> /etc/apt/apt.conf
 RUN echo "Acquire::https::Proxy \"$HTTP_PROXY\";" >> /etc/apt/apt.conf
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends apt-transport-https python3 zip unzip
+RUN apt-get install -y --no-install-recommends apt-transport-https python3 zip unzip jq
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py --cert /usr/local/share/ca-certificates/company.crt && rm get-pip.py
 

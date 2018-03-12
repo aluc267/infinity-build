@@ -7,7 +7,7 @@ FROM gradle:4.3.1-jdk7
 USER root
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends apt-transport-https python3 zip unzip
+RUN apt-get install -y --no-install-recommends apt-transport-https python3 zip unzip jq
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && rm get-pip.py
 
