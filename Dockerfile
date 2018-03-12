@@ -27,6 +27,7 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 COPY package.json /usr/preinstalled-node-modules/package.json
+COPY jboss-base /usr/jboss-base
 
 RUN \
   cd /usr/preinstalled-node-modules && \
